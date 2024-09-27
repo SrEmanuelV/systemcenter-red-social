@@ -1,0 +1,65 @@
+:root {
+    --color-primario: #007BFF; /* Azul */
+    --color-secundario: #0056b3; /* Azul oscuro */
+    --color-fondo: #f2f2f2; /* Gris claro */
+    --color-texto: #333; /* Negro */
+    --color-texto-secundario: #fff; /* Blanco */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 20px;
+}
+
+.perfil {
+    background-color: var(--color-texto-secundario);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    margin: auto;
+}
+
+.foto-perfil {
+    margin-bottom: 15px;
+}
+
+.imagen-perfil {
+    border-radius: 50%;
+    width: 100px; /* Tamaño adecuado */
+    height: 100px; /* Tamaño adecuado */
+    object-fit: cover;
+    border: 2px solid var(--color-primario);
+}
+
+.info-perfil {
+    text-align: center;
+    color: var(--color-texto);
+}
+
+.nombre-usuario {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.nombre-de-usuario {
+    color: var(--color-primario);
+}
+
+.estadisticas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.estadistica {
+    flex: 1;
+    text-align: center;
+    color: var(--color-texto);
+}
