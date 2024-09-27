@@ -24,9 +24,7 @@ Git (opcional, para clonar el repositorio).
 Pasos de Instalación
 Descarga el repositorio desde GitHub. Puedes clonar el proyecto o descargar el archivo .zip y descomprimirlo:
 
-bash
-Copiar código
-git clone https://github.com/tu-usuario/systemcenter-red-social.git
+git clone https://github.com/SrEmanuelV/systemcenter-red-social.git
 O bien, descargar el archivo en formato .zip y extraerlo.
 
 Configura la base de datos.
