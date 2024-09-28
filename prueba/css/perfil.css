@@ -1,0 +1,215 @@
+/* Colores y fuentes base */
+:root {
+    --color-primario: #007BFF; /* Azul */
+    --color-secundario: #0056b3; /* Azul oscuro */
+    --color-fondo: #f2f2f2; /* Gris claro */
+    --color-texto: #333; /* Negro */
+    --color-texto-secundario: #fff; /* Blanco */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* El contenido se alinea desde la izquierda */
+}
+
+/* Barra lateral fija a la izquierda */
+.barra-lateral {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--color-primario); /* Azul primario */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Scroll si hay muchas opciones */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras */
+    z-index: 1000;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo-imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Menú de opciones */
+.menu-opciones {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu-opciones li {
+    width: 100%;
+}
+
+.menu-opciones li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-opciones li a:hover {
+    background-color: var(--color-secundario); /* Azul oscuro */
+}
+
+/* Ajustar el contenedor de perfil para que esté centrado */
+.perfil {
+    background-color: var(--color-texto-secundario);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px; /* Ancho máximo para que no se extienda demasiado */
+    margin-left: calc(250px + 50px); /* Espacio para la barra lateral y algo de margen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Para que se ajuste automáticamente a su contenido */
+    margin-top: 20px; /* Separación superior */
+}
+
+/* Imagen del perfil */
+.imagen-perfil {
+    border-radius: 50%;
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    border: 2px solid var(--color-primario);
+}
+
+/* Información del perfil centrada */
+.info-perfil {
+    text-align: center;
+    color: var(--color-texto);
+}
+
+.nombre-usuario {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.nombre-de-usuario {
+    color: var(--color-primario);
+}
+
+/* Estadísticas del perfil */
+.estadisticas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.estadistica {
+    flex: 1;
+    text-align: center;
+    color: var(--color-texto);
+    cursor: pointer;
+}
+
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.perfil-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfil-imagen {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.editar-perfil {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.editar-perfil h3 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.editar-perfil form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.editar-perfil form input[type="text"],
+.editar-perfil form textarea,
+.editar-perfil form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.editar-perfil form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.editar-perfil form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .barra-lateral {
+        width: 200px; /* Reducir el tamaño en pantallas pequeñas */
+    }
+
+    .perfil {
+        margin-left: calc(200px + 20px); /* Ajustamos el margen en pantallas pequeñas */
+        max-width: 90%; /* Hacer que el perfil ocupe más espacio en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-lateral {
+        width: 150px; /* Ajuste aún más en pantallas muy pequeñas */
+    }
+
+    .perfil {
+        margin-left: calc(150px + 20px); /* Ajustamos el margen izquierdo para pantallas pequeñas */
+        max-width: 90%;
+    }
+
+    .menu-opciones li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
